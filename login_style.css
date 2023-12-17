@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8; /* Use a decimal value for opacity (0.8 instead of 80%) */
+    border-color: yellow;
+}
+
+.form{
+    position: absolute;
+    border-radius: 6px;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    background: transparent;
+}
+.form.signup{
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+.forms.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
+}
+header{
+    font-size: 20px;
+    font-weight: 600;
+    color: #EBC3DB;
+    text-align: center;
+}
+form{
+    margin-top: 30px;
+
+}
+.form  .field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+.field input,
+.field button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+.field input{
+    outline: none;
+    padding: 0 10px;
+    border: 1px solid black;
+    background-color: #007f5f;
+    backface-visibility: 0.3;
+    color: #EBC3DB;
+}
+.field input:focus{
+    border-bottom-width: 2px;
+}
+.eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #EBC3DB;
+    cursor: pointer;
+    padding: 5px;
+}
+.field button{
+    color: black;
+    background-color: #aacc00;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.field button:hover{
+    background-color: #697d04;
+    color: whitesmoke;
+
+}
+.form-link{
+    text-align: center;
+    margin-top: 10px;
+}
+.form-link span,
+.form-link a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #EBC3DB;
+}
+.form a{
+    color: #e0fbfc;
+    text-decoration: none;
+}
+.form-content a:hover {
+    text-decoration: underline;
+    
+}
+.line::before{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: #dddf00;
+    padding: 0 15px;
+    opacity: 0.5;
+
+}
+.media-options a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+a.facebook{
+    color: #fff;
+    background-color: #0f3c9d;
+    border: 1px solid #1F2232;
+}
+a.facebook .facebook-icon{
+    height: 28px;
+    width: 28px;
+    color: #0b4ad0;
+    font-size: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.facebook-icon,
+img.google-img{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+img.google-img{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+a.google{
+    border: 1px solid #bbabab;
+    background-color: #fff;
+    border: 1px solid #1F2232;
+}
+a.google span{
+    font-weight: 500;
+    opacity: 0.6;
+    color: #232836;
+
+}
+
+.warning {
+    font-size: 14px; /* Adjust the font size to your preference */
+    text-align: center; /* Center-align the text */
+    color: whitesmoke; /* Change the color to red or any other color you prefer */
+    animation: blink 1.5s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@media screen  and (max-width: 400px) {
+    .form{
+        padding: 15px 10px;
+
+    }
+}    
+.input-field input[type="email"]::placeholder {
+    color: #EBC3DB;
+    opacity: 1;
+}
+
+/* Change the placeholder color for the password input */
+.input-field input[type="password"]::placeholder {
+    color: #EBC3DB;
+    opacity: 1;
+}
+.field.input-field {
+    position: relative;
+}

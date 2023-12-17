@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay loop muted id="video-background">
+        <source src="Pokem0n.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="images/Logo.png" class="logo"></a>
+                <ul id="sidemenu">
+                    <li><a href="projects.html">Back</a></li>
+                    <!-- <li><a href="#about">Player</a></li> -->
+                    <!-- <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">CubeV3</a></li>
+                    <li><a href="#contact">Contact</a></li> -->
+                    <li><a href="login.html">Logout</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <audio id="clickSound" src="pokemon_click.mp3"></audio>
+            </nav>
+            <!-- <div class="header-text">
+                <p>Welcome Trainer</p>
+                <h1>This is my <span>projects.</span></h1>
+            </div> -->
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="to_do_app">
+            <h2>To-Do List <img src="logo.png"></h2>
+            <div class="row">
+                <input type="text" id="taskInput" placeholder="Add a task">
+                <button onclick="Addtask()">Add</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

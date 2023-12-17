@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="QRcode_style.css">
+</head>
+<body>
+    <video autoplay loop muted id="video-background">
+        <source src="Pokem0n.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="header">
+        <div class="containers">
+            <nav>
+                <a href="../index.html"><img src="KacieLogo.png" class="logo"></a>
+                <ul id="sidemenu">
+                    <button onclick="window.location.href='../projects.html'">Back</button>
+                    <!-- <li><a href="#about">Player</a></li> -->
+                    <!-- <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">CubeV3</a></li>
+                    <li><a href="#contact">Contact</a></li> -->
+                    <!-- <li><a href="login.html">Logout</a></li> -->
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <audio id="clickSound" src="pokemon_click.mp3"></audio>
+            </nav>
+            <!-- <div class="header-text">
+                <p>Welcome Trainer</p>
+                <h1>This is my <span>projects.</span></h1>
+            </div> -->
+        </div>
+        
+    </div>
+    <div class="container">
+        <p>QR Code Generator</p>
+        <input type="text" placeholder="Input Text" id="qrText">
+
+        <div id="imgBox">
+            <img src="" id="qrImage">
+        </div>
+
+        <button onclick="generateQR()">Generate QR Code</button>
+
+    </div>
+<script>
+
+let imgBox = document.getElementById("imgBox");
+let qrImage = document.getElementById("qrImage");
+let qrText = document.getElementById("qrText");
+
+function generateQR()
+{
+    if(qrText.value.length > 0)
+    {
+    qrImage.src = " https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value;
+    imgBox.classList.add("show-img");
+    }else{
+        qrText.classList.add('error');
+        setTimeout(()=>{
+            qrText.classList.remove('error');
+        },1000);
+    }
+}
+
+</script>
+
+    
+</body>
+</html>

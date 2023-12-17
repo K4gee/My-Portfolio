@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Login</title>
+
+
+    <!-- ^ CSS ^ -->
+    <link rel="stylesheet" href="login_style.css">
+
+    <!-- ^Boxicons CSS ^ -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/pokemon.css' rel='stylesheet'>
+
+</head>
+<body>
+    <video autoplay loop muted id="video-background">
+        <source src="images/bggif.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>PokeWeb Entry</header>
+                <form action="#">
+                    <div class="field input-field">
+                        <input type="email"  placeholder="Username" class="input with-icon">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="password">
+                        <i class='bx bxs-hide eye-icon' ></i>
+                    </div>
+
+                    <p id="warning" class="warning"></p>
+
+                    <div class="form-link">
+                        <a href="#" class="forgot-pass">Forgot password?</a>
+                    </div>
+
+                    <div class="field button-field">
+                        <button onclick="checkLoginAndOpenTab()">Login</button>
+                    </div>
+
+                    
+                </form>
+
+                <div class="form-link">
+                    <span>Already have an account?  <a href="#" class="link signup-link">Sign Up</a></span>
+                </div>
+            </div>
+
+            <div class="line"  style="height: 1px; width: 100%; background-color: #e5e5e5; margin: 36px 0; position: relative;"></div>
+
+            <div class="media-options">
+                <a href="#" class="field facebook">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    
+                    <span>Login with Facebook</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="field google">
+                    <img src="images/google.png" alt="" class="google-img">
+                    <span>Login with Google</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!--^-------- SIGN UP FORM^ ------------>
+
+        <div class="form signup">
+            <div class="form-content">
+                <header>Signup</header>
+                <form action="#">
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="password">
+                        
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="password">
+                        <i class='bx bxs-hide eye-icon' ></i>
+                    </div>
+
+
+                    <div class="field button-field">
+                        <button>Signup</button>
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Already have an account?  <a href="#" class="link login-link">Login</a></span>
+                </div>
+            </div>
+
+            <div class="line"  style="height: 1px; width: 100%; background-color: #e5e5e5; margin: 36px 0; position: relative;"></div>
+
+            <div class="media-options">
+                <a href="#" class="field facebook">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Login with Facebook</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="field google">
+                    <img src="images/google.png" alt="" class="google-img">
+                    <span>Login with Google</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    
+
+    <!-- ^ JAVA SCRIPT ^ -->
+
+    <script src="script.js"></script>
+
+
+    <script>
+        function checkLoginAndOpenTab() {
+            const username = document.querySelector('.login .input').value;
+            const password = document.querySelector('.login .password').value;
+            const warning = document.getElementById("warning");
+    
+            if (username === "" || password === "") {
+                warning.textContent = "Username and password are required!";
+            } else {
+                // Perform your login logic here
+                // For example, redirect to a login page:
+                window.open('index.html', '_self');
+            }
+        }
+    </script>
+
+
+
+    <!-- <script>
+        function openNewTab() {
+            window.open('home.html', '_self');
+        }
+    </script> -->
+
+
+
+
+<!-- <script>
+    function loginWithFacebook() {
+        // Replace 'facebook-login.html' with the actual URL for Facebook login or your desired behavior
+        window.open('https://www.facebook.com/', '_blank');
+    }
+</script> -->
+
+
+</body>
+</html>
